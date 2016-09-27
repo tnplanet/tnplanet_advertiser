@@ -13,8 +13,36 @@
 
 ```Xml
 <manifest>
-    ...
-    <!-- Permission for BuzzAd-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 </manifest>
+```
+
+## 3. 함수 추가
+- TheNewPlanet.Init(Context context, String App_key) : CPI 상품일 경우 호출 합니다.
+- TheNewPlanet.Excute(Context context, String App_key) :  CPE 상품일 경우 호출 합니다.
+
+##### 실행형
+실행후 처음 호출되는 액티비티 생성 시점에 호출합니다.
+```Java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+
+    // App_key : 담당자에게 발급받은 키값
+    TheNewPlanet.Init(this, "App_key");
+}
+```
+
+##### 액션형
+액션완료 시점에 호출합니다.
+
+```Java
+void onAction() {
+    // App_key : 담당자에게 발급받은 키값
+    TheNewPlanet.Excute(this, "App_key");
+}
+```
+
+## 4. 테스트 완료 후 광고 집행
+위 과정을 통해 연동한 apk 파일을 담당자에게 메일을 주시면 테스트 후에 광고가 진행됩니다.
