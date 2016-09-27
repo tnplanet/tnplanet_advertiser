@@ -4,7 +4,6 @@
 - 안드로이드 버전 요구사항 : 2.2(API Level 8) 이상
 
 ## 1. 프로젝트에 SDK 추가
-- SDK 다운로드 후 압축을 해제합니다.
 - tnplanet_advertiser.jar 파일을 프로젝트(예를 들면 libs 폴더 안)에 추가합니다.
 
 ## 2. AndroidManifest.xml 파일 수정
