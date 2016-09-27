@@ -22,7 +22,7 @@
 - TheNewPlanet.Init(Context context, String App_key) : CPI 상품일 경우 호출 합니다.
 - TheNewPlanet.Excute(Context context, String App_key) :  CPE 상품일 경우 호출 합니다.
 
-##### 실행형 : 실행후 처음 호출되는 액티비티 생성 시점에 호출합니다.
+#### 실행형 : 실행후 처음 호출되는 액티비티 생성 시점에 호출합니다.
 ```Java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-##### 액션형 : 액션완료 시점에 호출합니다.
+#### 액션형 : 액션완료 시점에 호출합니다.
 ```Java
 void onAction() {
     // App_key : 담당자에게 발급받은 키값
